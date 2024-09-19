@@ -1,20 +1,20 @@
-package Lesson2;
+package lesson2;
 
 import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
 import java.util.Locale;
 import java.util.Objects;
 
-public class lesson2 {
+public class Lesson2 {
     public static void main(String[] args) {
 
-     //   stringPool();
+        //   stringPool();
 //        System.out.println(buildString(8,'1', '2'));
 //        String mail = "manager@gmail.com";
 //        System.out.println(extractDomainName("manager@gmail.com"));
-      //  System.out.println(compress("aaaabbbcdd"));
+        //  System.out.println(compress("aaaabbbcdd"));
 
-        String s = "abchhuihgyg";
+        String s = "abchhuihgyjjjjjljg";
 
         int length = s.length(); // длина строки
         char c = s.charAt(2); // элемент строки по индексу
@@ -85,7 +85,7 @@ public class lesson2 {
         String temp = s + String.valueOf(c2);
         StringBuilder str = new StringBuilder();
         for (int i = 0; i < n / 2 ; i++) {
-           // str += temp;
+            // str += temp;
             str.append(temp);
         }
 //        String append = String.valueOf(c1) + c2;
