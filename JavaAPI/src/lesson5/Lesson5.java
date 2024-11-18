@@ -8,6 +8,13 @@ public class Lesson5 {
     public static void main(String[] args) {
     //    Teoriya();
 
+        //hashMap();
+
+        System.out.println(isIsomorth("add","egg"));
+        System.out.println(isIsomorth("foo","bar"));
+    }
+
+    private static void hashMap() {
         HashMap<String, Integer> map = new HashMap<>();
         map.put("string", 6);
         System.out.println(map);
@@ -29,12 +36,7 @@ public class Lesson5 {
 
         // [null, null, [java=4, python =6], ..., null]
 
-
-
-
-
-
-
+        System.out.println("java".hashCode());
     }
 
     private static void Teoriya() {
@@ -75,5 +77,33 @@ public class Lesson5 {
             String key = entry.getKey();
             String value = entry.getValue();
         }
+    }
+
+
+    /**
+     * Даны две строки, написать метод, который вернет true,
+     * если эти строк являются изоморфными
+     */
+    private static boolean isIsomorth(String first, String second) {
+       if (first.length() != second.length()) {
+           return false;
+       }
+
+       HashMap<Character, Character> map = new HashMap<>();
+        char[] firstChar = first.toCharArray();
+        char[] secondChar = second.toCharArray();
+
+        for (int i = 0; i < firstChar.length; i++) {
+            char a = firstChar[i];
+            char b = secondChar[i];
+            if (!map.containsKey(a)) {
+                map.put(a, b);
+            }else{
+                if (map.get(a) != b){
+                    return false;
+                }
+            }
+        }
+        return true;
     }
 }
